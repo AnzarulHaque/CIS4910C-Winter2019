@@ -77,73 +77,56 @@
             <div class="col-lg-12">
               <h2>Welcome <b><?php echo $_SESSION['email']; ?></b></h2>
 
-              <br>You may register for your class here. All class details are as below:</p>
+              <br>You may register for your class here. All class details are as below:</p><br><br>
+
+              <?php
+                  /*Connect using SQL Server authentication.*/
+                  include("db_conection.php");
+                  $tsql= "SELECT CLASS_ID, PROGRAM_NAME, START_DATE, CLASS_SIZE, CLASS_TYPE, COST from yoga_classes";
+                    $getResults= sqlsrv_query($conn, $tsql);
+                    if ($getResults == FALSE) {
+                        echo (sqlsrv_errors());
+                    }
+                    ?>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Program Name</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Class Size</th>
+                            <th scope="col">Class Type</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Interested</th>
+                          </tr>
+                        </thead>
+
+                      <tbody>
+                    <?php
+                        while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+                    ?>
+                          <tr>
+                            <th scope="row"><?php echo ($row['CLASS_ID'] . PHP_EOL); ?></th>
+                            <th scope="row"><?php echo ($row['PROGRAM_NAME'] . PHP_EOL); ?></th>
+                            <td><?php echo ($row['START_DATE'] . PHP_EOL); ?></td>
+                            <td><?php echo ($row['CLASS_SIZE'] . PHP_EOL); ?></td>
+                            <td><?php echo ($row['CLASS_TYPE'] . PHP_EOL); ?></td>
+                            <td><?php echo ($row['COST'] . PHP_EOL); ?></td>
+                            <td><a href="#"><button class="btn btn-info">Register</button></a></td>
+                          </tr>
+
+
+                    <?php
+                        }
+                    ?>
+                  </tbody>
+                  </table>
+                    <?php
+                    sqlsrv_free_stmt($getResults);
+            ?>
+
             </div>
-        </div>
-        <div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->
 
-            <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
-            <thead>
-
-            <tr>
-
-                <th>Program Name</th>
-                <th>Start Date</th>
-                <th>Class Size</th>
-                <th>Class Type</th>
-                <th>Cost (USD)</th>
-                <th>Interested</th>
-            </tr>
-            </thead>
-
-            <tr>
-            <!--here showing results in the table -->
-                <td>Hatha Yoga</td>
-                <td>2019-04-03</td>
-                <td>25</td>
-                <td>Daily</td>
-                <td>100.00</td>
-                <td><a href="#"><button class="btn btn-info">Register</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
-            </tr>
-            <tr>
-            <!--here showing results in the table -->
-                <td>Vinyasa Flow</td>
-                <td>2019-04-12</td>
-                <td>20</td>
-                <td>Weekends</td>
-                <td>125.00</td>
-                <td><a href="#"><button class="btn btn-info">Register</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
-            </tr>
-            <tr>
-            <!--here showing results in the table -->
-                <td>Yin Yoga</td>
-                <td>2019-04-20</td>
-                <td>30</td>
-                <td>Evening</td>
-                <td>50.00</td>
-                <td><a href="#"><button class="btn btn-info">Register</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
-            </tr>
-            <tr>
-            <!--here showing results in the table -->
-                <td>Sculptworks Yoga</td>
-                <td>2019-05-01</td>
-                <td>50</td>
-                <td>Morning</td>
-                <td>60.00</td>
-                <td><a href="#"><button class="btn btn-info">Register</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
-            </tr>
-            <tr>
-            <!--here showing results in the table -->
-                <td>Corebootyworks Yoga</td>
-                <td>2019-05-12</td>
-                <td>15</td>
-                <td>Daily</td>
-                <td>150.00</td>
-                <td><a href="#"><button class="btn btn-info">Register</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->
-            </tr>
-
-            </table>
-          </div>
         </div>
 
         <hr>
