@@ -50,15 +50,15 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                   <li><a href="index.html">Home</a></li>
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
                   <li><a href="#">Classes</a></li>
                   <li><a href="faqs.html">FAQs</a></li>
                   <li><a href="#">Contact Us</a></li>
                 </ul>
                 <div class="navbar-form navbar-right">
                     <button type="submit" class="btn btn-danger"><a href="#">My Profile</a></button>
-				    <button type="submit" class="btn btn-warning"><a href="Logout.php">Logout</a></button>
-			    </div>
+				            <button data-toggle="modal" data-target="#logoutModal" class="btn btn-warning">Logout</a></button>
+			          </div>
             </div><!--/.navbar-collapse -->
     </nav><br>
     <section class="main">
@@ -140,6 +140,28 @@
             </div>
         </footer>
     </div> <!-- /container -->
+
+    <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4>Log Out <i class="fa fa-lock"></i></h4>
+          </div>
+          <div class="modal-body">
+            <p><i class="fa fa-question-circle"></i> Are you sure you want to log-off? <br /></p>
+            <div class="actionsBtns">
+              <form action="/logout.php" method="post">
+                  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                  <input type="submit" class="btn btn-default btn-primary" value="Logout"/>
+  	              <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap core JavaScript
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

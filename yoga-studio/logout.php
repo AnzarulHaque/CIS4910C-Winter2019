@@ -1,10 +1,10 @@
 <?php
-session_start();
+  session_start();
 
-if(isset($_SESSION['$email'])) {
-  session_destroy();
-  echo "<script>location.href='index.html'</script>";
-} else {
-  echo "<script>location.href='index.html'</script>";
-}
- ?>
+  if(isset($_SESSION['$email'])) {
+    session_destroy();
+    echo "<script>location.href='index.html'</script>";
+  } else {
+    echo "<script>location.href='signin.php'</script>";
+  }
+?>
