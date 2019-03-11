@@ -50,18 +50,14 @@
 			<ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
         <li><a href="about_us.html">About Us</a></li>
-        <li><a href="#">Classes</a></li>
-				<li><a href="#">FAQs</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="faqs.html">Classes</a></li>
+				<li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
 			</ul>
-
         </div><!--/.navbar-collapse -->
-
     </nav><br>
-
 	<br><br>
     </div>
-
 	<!-- Example row of columns -->
 	<div class="container">
       <div class="row">

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -25,8 +26,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+</head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -40,10 +44,10 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                   <li><a href="index.html">Home</a></li>
-                  <li class="active"><a href="about_us.html">About Us</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
                   <li><a href="signin.php">Classes</a></li>
                   <li><a href="faqs.html">FAQs</a></li>
-                  <li><a href="contact_us.html">Contact Us</a></li>
+                  <li class="active"><a href="#">Contact Us</a></li>
                 </ul>
                 <div class="navbar-form navbar-right">
                     <button type="submit" class="btn btn-success"><a href="signin.php">Sign in</a></button>
@@ -55,40 +59,54 @@
         <div class="container grid-custom">
             <div class="row">
 
-                <div class="col-sm-12 col-xs-12"><img src="images/about-us.jpg" alt="" class="img-responsive"></div>
+                <div class="col-sm-12 col-xs-12"><img src="images/contact-us.jpg" alt="" class="img-responsive"></div>
             </div>
         </div>
     </section>
     <br><br>
-
-    <!-- Example row of columns -->
-    <div class="container">
-
-            <h2>Who We Are</h2><br />
-            <div class="col-lg-10"">
-              <p class="lead"><strong>Yoga Studio</strong> is a Schaumburg, IL based premier yoga institute. Our workshops, taught by leading yoga experts, provide in-depth yoga immersions as well as the latest in yoga research and techniques. Whether you need to move your body, quiet your mind or connect to your spirit, there is a place for you at Yoga Studio.  Whether you are new to yoga or an experienced practitioner, there is a place for you at Yoga Studio.  Whether you are injured, overweight, out of shape or in the best shape of your life, there is a place for you at Yoga Studio.</p><br>
-
-              <p class="lead">We infuse our yoga classes and teacher training with quality, integrity and a sense of humor. Our highly trained, passionate teachers make yoga accessible to everyone and offer a practice that can be applied on and off the mat.</p><br>
-
-              <p class="lead">Our studio specializes in private (1:1) training and provides small group classes in Pilates mat and machine, Yoga, Tabata HIIT (High Intensity Interval Training). Our trainers/instructors are certified professionals who have the highest levels of education, training, and real world experience. We are conveniently located in the heart of Schaumburg, near Schaumburg Road. </p><br>
-
-              <p class="lead">Being a small, non-intimidating studio allows us to provide individualized attention which equal greater benefits and gains for your time (& money) than at other exercise facilities. Purchasing private training packages and our class registration and cancellation process is streamlined. All clients have an online web account via our website.</p><br>
-
-              <p><a class="btn btn-ghost" href="contact_us.html">Contact Us</a></p>
-            </div>
-
+</div>
+<div class="container">
+  <div style="text-align:center">
+    <h1>Contact Us</h1>
+	<h3>775 Schaumburg Rd, <br>Schaumburg, IL 60194</h3>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div><hr>
+  <div class="row">
+    <div class="col-lg-6">
+	  <h3>Location Map</h3>
+	  <br>
+      <img src="images/location-map.jpg" style="width:100%">
     </div>
-        <hr>
-    <div class="container"
-        <footer class="footer">
-            <div class="container">
-                <a href="#"><img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter1.png" width="35" height="35" /></a>
-                <a href="#"><img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin1.png" width="35" height="35" /></a>
-                <a href="#"><img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook1.png" width="35" height="35" /></a>
-                <a href="#"><img title="Pinterest" alt="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest1.png" width="35" height="35" /></a>
-                &copy;2019 - <strong>Yoga Studio</strong>
-            </div>
-        </footer>
+    <div class="col-lg-6">
+      <form action="/action_page.php">
+        <label for="fname">First Name:</label>
+		<input type="text" name="firstname" id="fname" class="form-control" maxlength="100" placeholder="Your First Name" required autofocus><br>
+
+        <label for="lname">Last Name:</label>
+		<input type="text" name="lastname" id="lname" class="form-control" maxlength="100" placeholder="Your Last Name"><br>
+
+		<label for="lname">Address:</label>
+		<input type="text" name="address" id="address" class="form-control" maxlength="100" placeholder="Your Address"><br>
+
+
+        <label for="subject">Subject:</label><br>
+        <textarea class="form-control" id="subject" name="subject" placeholder="Write something.." style="height:125px" maxlength="100"></textarea><br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+	</div>
+  </div>
+
+  <hr>
+		<footer class="footer">
+			<div class="container">
+				<a href="#"><img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter1.png" width="35" height="35" /></a>
+				<a href="#"><img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin1.png" width="35" height="35" /></a>
+				<a href="#"><img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook1.png" width="35" height="35" /></a>
+				<a href="#"><img title="Pinterest" alt="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest1.png" width="35" height="35" /></a>
+				&copy;2019 - <strong>Yoga Studio</strong>
+			</div>
+		</footer>
     </div> <!-- /container -->
     <!-- Bootstrap core JavaScript
     <!-- Placed at the end of the document so the pages load faster -->
@@ -97,5 +115,6 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 </html>

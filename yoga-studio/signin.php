@@ -49,11 +49,11 @@ session_start();//session starts here
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
                   <li><a href="#">Classes</a></li>
                   <li><a href="faqs.html">FAQs</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
             </div><!--/.navbar-collapse -->
     </nav>
